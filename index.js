@@ -27,10 +27,9 @@ $(document).ready(() => {
     
     $('form').submit(function(e){
         e.preventDefault();
-        var searchString = $('#search-bar').val(); 
+        var searchString = $('search-bar').val(); 
         var urlEncodedSearchString = encodeURIComponent(searchString);
-        //var movieHTML = renderMovies(movieData);
-        //$('.movies-container').html(movieHTML);
+        
 
         fetch("https://www.omdbapi.com/?apikey=8534d2a7&s=" + urlEncodedSearchString)
             .then(response => response.json())
